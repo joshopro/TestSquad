@@ -10,7 +10,8 @@ const theme = createTheme({
     },
     neutral :{
         primary: '#191531',
-        white: '#FFFFFF80'
+        white: '#FFFFFF80',
+        enabled: '#191531'
     },
     secondary: {
       main: '#E0C2FF',
