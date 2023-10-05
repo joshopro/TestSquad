@@ -1,3 +1,4 @@
+import MostRecent from "./MostRecent";
 import Navbar from "./NavBar";
 import SuperLikedCard from "./SuperLikedCard";
 
@@ -7,6 +8,9 @@ const Overview = () => {
       <Navbar />
       <div>
         <SuperLikedCard />
+      </div>
+      <div>
+        <MostRecent />
       </div>
     </>
   );

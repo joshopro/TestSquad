@@ -2,7 +2,7 @@ import { Typography, styled } from "@mui/material";
 
 const CardDescription = styled(Typography)`
   color: var(--neutral-600-primary, #191531);
-  text-align: center;
+  text-align: ${({textAlign}) => textAlign || "center"};
   font-feature-settings: "calt" off;
   /* Desktop/Body/Regular */
   font-family: sans-serif;

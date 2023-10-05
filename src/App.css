@@ -1,6 +1,7 @@
 :root {
   --secondary-50: #f8f8ff;
   --neutral-600-primary: #191531;
+  --primary-50: #FFF7FD;
 }
 .App {
   text-align: center;
