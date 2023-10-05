@@ -11,6 +11,7 @@ const CardAddToCart = styled(Link)`
   font-style: normal;
   font-weight: 536;
   line-height: 24px; /* 150% */
+  text-decoration: none;
 `;
 
 export default CardAddToCart;

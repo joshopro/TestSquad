@@ -1,6 +1,7 @@
 import FriendsFrame from "./FriendsFrame";
 import MostRecent from "./MostRecent";
 import Navbar from "./NavBar";
+import SquadMatches from "./SquadMatches";
 import SuperLikedCard from "./SuperLikedCard";
 
 const Overview = () => {
@@ -13,6 +14,9 @@ const Overview = () => {
       </div>
       <div>
         <MostRecent />
+      </div>
+      <div>
+        <SquadMatches />
       </div>
     </>
   );
