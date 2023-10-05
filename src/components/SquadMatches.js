@@ -81,7 +81,8 @@ const SliderButton = styled("button")`
   border-radius: 100px;
   background: var(--content-white-enabled, #fff);
   /* Elevation/400 */
-  box-shadow: 0px 40px 80px -16px rgba(25, 21, 49, 0.16),
+  box-shadow:
+    0px 40px 80px -16px rgba(25, 21, 49, 0.16),
     0px 12px 32px -8px rgba(25, 21, 49, 0.16),
     0px 0px 1px 0px rgba(25, 21, 49, 0.16);
   border: 1px solid transparent;
@@ -124,7 +125,7 @@ const Image = styled("img")`
 const Main = styled(Box)`
   background: var(--crme-lightest, #fff9f0);
   border-radius: 24px;
-  grid-row: 2 span /2;
+  grid-row: 2 span / 2;
 `;
 
 const Wrapper = styled(Box)`

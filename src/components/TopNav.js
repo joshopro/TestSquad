@@ -26,7 +26,9 @@ const TopNav = () => {
           <Dot />
         </AccountIconWrapper>
         <Diamond alt="points" src={diamond} />
-        <Typography mx="4px" width="53px">681 pts</Typography>
+        <Typography mx="4px" width="53px">
+          681 pts
+        </Typography>
         <ShoppingBag alt="cart" src={shoppingBag} />
         <Typography ml="8px" mr="12px" width="53px">
           0

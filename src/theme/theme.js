@@ -1,28 +1,26 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   typography: {
-    fontFamily: [
-      'sans-serif'
-    ]
+    fontFamily: ["sans-serif"],
   },
   palette: {
     primary: {
-      main: '#FF5733',
+      main: "#FF5733",
       // light: will be calculated from palette.primary.main,
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
-    neutral :{
-        primary: '#191531',
-        white: '#FFFFFF80',
-        enabled: '#191531'
+    neutral: {
+      primary: "#191531",
+      white: "#FFFFFF80",
+      enabled: "#191531",
     },
     secondary: {
-      main: '#E0C2FF',
-      light: '#F5EBFF',
+      main: "#E0C2FF",
+      light: "#F5EBFF",
       // dark: will be calculated from palette.secondary.main,
-      contrastText: '#47008F',
+      contrastText: "#47008F",
     },
   },
 });

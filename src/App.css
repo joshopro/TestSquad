@@ -1,8 +1,8 @@
 :root {
   --secondary-50: #f8f8ff;
   --neutral-600-primary: #191531;
-  --primary-50: #FFF7FD;
-  --crme-lightest: #FFF9F0;
+  --primary-50: #fff7fd;
+  --crme-lightest: #fff9f0;
 }
 .App {
   text-align: center;

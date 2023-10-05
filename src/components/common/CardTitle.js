@@ -2,7 +2,7 @@ import { Typography, styled } from "@mui/material";
 
 const CardTitle = styled(Typography)`
   color: var(--neutral-600-primary, #191531);
-  text-align: ${({textAlign}) => textAlign || "center"};
+  text-align: ${({ textAlign }) => textAlign || "center"};
   /* Desktop/Display/DH3 */
   font-family: sans-serif;
   font-size: 32px;
