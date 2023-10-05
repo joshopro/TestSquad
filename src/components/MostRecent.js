@@ -35,7 +35,7 @@ const TextContainer = styled(Box)`
 `;
 
 const Wrapper = styled(Box)`
-  max-width: 584px;
+  grid-row: 1 span / 2;
   background: var(--primary-50, #fff7fd);
   display: flex;
   flex-direction: row;

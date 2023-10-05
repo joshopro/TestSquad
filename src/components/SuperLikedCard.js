@@ -26,10 +26,9 @@ const Image = styled("img")`
 `;
 
 const Main = styled(Box)`
-  max-width: 584px;
+  grid-row: 1 span / 1;
   background: var(--secondary-50, #f8f8ff);
   border-radius: 24px;
-
 `;
 
 const Wrapper = styled(Box)`

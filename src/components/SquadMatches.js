@@ -122,9 +122,9 @@ const Image = styled("img")`
 `;
 
 const Main = styled(Box)`
-  max-width: 584px;
   background: var(--crme-lightest, #fff9f0);
   border-radius: 24px;
+  grid-row: 2 span /2;
 `;
 
 const Wrapper = styled(Box)`
