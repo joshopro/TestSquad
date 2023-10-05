@@ -16,6 +16,6 @@ const Navbar = () => {
 
 const NavContainer = styled(Box)`
 padding: 23px 116px 0px 116px;
-margin-bottom: 50px;
+margin-bottom: 105px;
 `
 export default Navbar;

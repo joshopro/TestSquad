@@ -5,6 +5,7 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import logo from "../assets/Logo.svg";
 import diamond from "../assets/diamond.svg";
 import shoppingBag from "../assets/shopping-bag.svg";
+import FlexBox from "./common/FlexBox";
 
 const TopNav = () => {
   return (
@@ -40,10 +41,7 @@ const UpperNav = styled(Box)`
   justify-content: space-between;
   align-items: center;
 `;
-const FlexBox = styled(Box)`
-  display: flex;
-  align-items: center;
-`;
+
 const SearchBox = styled(Box)`
   display: flex;
   border-radius: 100px;
