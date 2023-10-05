@@ -17,7 +17,7 @@ const TopNav = () => {
         <SearchIcon
           style={{ color: "#191531", marginRight: "8px", cursor: "pointer" }}
         />
-        <Input type="text" placeholder="search Anything" />
+        <Input type="text" placeholder="Search anything" />
       </SearchBox>
       <FlexBox>
         <AccountIconWrapper>
@@ -25,9 +25,9 @@ const TopNav = () => {
           <Dot />
         </AccountIconWrapper>
         <Diamond alt="points" src={diamond} />
-        <Typography mx="4px">681 pts</Typography>
+        <Typography mx="4px" width="53px">681 pts</Typography>
         <ShoppingBag alt="cart" src={shoppingBag} />
-        <Typography ml="8px" mr="12px">
+        <Typography ml="8px" mr="12px" width="53px">
           0
         </Typography>
       </FlexBox>
@@ -48,6 +48,8 @@ const SearchBox = styled(Box)`
   display: flex;
   border-radius: 100px;
   width: 720px;
+  margin-left: 87px;
+  margin-right: 42px;
   border: 1.5px solid #dad8e4;
   padding: 8px 16px;
 `;
