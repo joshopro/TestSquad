@@ -1,14 +1,15 @@
-import Navbar from "./NavBar"
-
-
+import Navbar from "./NavBar";
+import SuperLikedCard from "./SuperLikedCard";
 
 const Overview = () => {
+  return (
+    <>
+      <Navbar />
+      <div>
+        <SuperLikedCard />
+      </div>
+    </>
+  );
+};
 
-    return (
-        <>
-            <Navbar />
-        </>
-    )
-}
-
-export default Overview
+export default Overview;
