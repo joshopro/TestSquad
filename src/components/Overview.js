@@ -5,12 +5,14 @@ import Navbar from "./NavBar";
 import SquadMatches from "./SquadMatches";
 import SuperLikedCard from "./SuperLikedCard";
 import Layout from "./common/Layout";
+import FriendsCarousel from "./FriendsCarousel";
 
 const Overview = () => {
   return (
     <>
       <Navbar />
       <FriendsFrame />
+      <FriendsCarousel />
       <Layout>
         <CardGrid>
           <SuperLikedCard />
