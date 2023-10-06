@@ -169,7 +169,6 @@ const Title = styled(CardTitle)`
 `;
 
 const Image = styled("img")`
-  width: 100%;
   max-height: 396px;
   margin-top: 32px;
 `;
