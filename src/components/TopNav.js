@@ -29,7 +29,7 @@ const TopNav = () => {
           681 pts
         </Typography>
         <ShoppingBag alt="cart" src={shoppingBag} />
-        <Typography ml="8px" mr="12px" width="53px">
+        <Typography ml="8px" mr="12px">
           0
         </Typography>
       </FlexBox>
