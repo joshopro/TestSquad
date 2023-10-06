@@ -9,7 +9,7 @@ import CardTitle from "./common/CardTitle";
 import CardDescription from "./common/CardDescription";
 import CardAddToCart from "./common/CardAddToCart";
 import AliceCarousel from "react-alice-carousel";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 const settings = {
   disableButtonsControls: true,

@@ -35,7 +35,7 @@ const FriendImage = styled("img")`
 const Heading = styled("span")`
   color: ${({ colorCode }) => (colorCode ? colorCode : "#191531")};
   text-align: center;
-  font-family: sans-serif;
+  font-family: ABC Ginto Normal Variable;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;

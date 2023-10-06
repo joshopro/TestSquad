@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   typography: {
-    fontFamily: ["sans-serif"],
+    fontFamily: ["ABC Ginto Normal Variable"],
   },
   palette: {
     primary: {

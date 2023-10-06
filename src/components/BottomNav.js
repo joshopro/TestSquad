@@ -8,14 +8,14 @@ function a11yProps(index) {
   };
 }
 const tabs = [
-  "Free Samples",
-  "Deluxe Samples",
+  "Free samples",
+  "Deluxe samples",
   "My squad",
   "Brands",
   "Makeup",
-  "Skin Care",
-  "Hair Care",
-  "Bath & Body",
+  "Skin care",
+  "Hair care",
+  "Bath & body",
   "Fragrances",
 ];
 
@@ -51,11 +51,12 @@ const TabsContainer = styled(Box)`
   margin-top: 24px;
 `;
 const StyledTab = styled(Tab)`
-  font-family: sans-serif;
+  font-family: ABC Ginto Normal Variable;
   font-size: 16px;
   font-style: normal;
   font-weight: 536;
   line-height: 24px;
+  text-transform: none;
 `;
 
 export default BottomNav;

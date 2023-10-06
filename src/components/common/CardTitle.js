@@ -4,7 +4,7 @@ const CardTitle = styled(Typography)`
   color: var(--neutral-600-primary, #191531);
   text-align: ${({ textAlign }) => textAlign || "center"};
   /* Desktop/Display/DH3 */
-  font-family: sans-serif;
+  font-family: ABC Ginto Normal Variable;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
