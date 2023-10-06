@@ -1,8 +1,8 @@
 import { Box, Typography, styled } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import logo from "../assets/Logo.svg";
+import search from "../assets/search.svg";
+import userIcon from "../assets/user-circle.svg";
 import diamond from "../assets/diamond.svg";
 import shoppingBag from "../assets/shopping-bag.svg";
 import FlexBox from "./common/FlexBox";
@@ -15,14 +15,13 @@ const TopNav = () => {
         <Logo alt="logo" src={logo} />
       </FlexBox>
       <SearchBox>
-        <SearchIcon
-          style={{ color: "#191531", marginRight: "8px", cursor: "pointer" }}
-        />
+        <SearchIcon alt="search" src={search} />
         <Input type="text" placeholder="Search anything" />
       </SearchBox>
       <FlexBox>
+        <StyledSearchIcon alt="search" src={search} />
         <AccountIconWrapper>
-          <AccountCircleOutlinedIcon fontSize="medium" />
+          <img src={userIcon} alt="user" />
           <Dot />
         </AccountIconWrapper>
         <Diamond alt="points" src={diamond} />
@@ -52,6 +51,9 @@ const SearchBox = styled(Box)`
   margin-right: 42px;
   border: 1.5px solid #dad8e4;
   padding: 8px 16px;
+  ${(props) => props.theme.breakpoints.down("md")} {
+    display: none;
+  }
 `;
 const Input = styled("input")`
   flex: 1;
@@ -62,6 +64,14 @@ const Input = styled("input")`
 `;
 const Logo = styled("img")`
   margin-left: 24px;
+  ${(props) => props.theme.breakpoints.down("md")} {
+    margin-left: 12px;
+    width: 90px;
+  }
+  ${(props) => props.theme.breakpoints.down("sm")} {
+    margin-left: 4px;
+    width: 80px;
+  }
 `;
 const AccountIconWrapper = styled(Box)`
   position: relative;
@@ -82,6 +92,18 @@ const Diamond = styled("img")`
 `;
 const ShoppingBag = styled("img")`
   margin-left: 12px;
+`;
+const SearchIcon = styled("img")`
+  margin-right: 8px;
+  cursor: pointer;
+`;
+const StyledSearchIcon = styled(SearchIcon)`
+  display: none;
+  ${(props) => props.theme.breakpoints.down("md")} {
+    display: block;
+    margin-right: 12px;
+    cursor: pointer;
+  }
 `;
 
 export default TopNav;

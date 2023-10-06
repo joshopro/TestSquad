@@ -187,6 +187,12 @@ const FriendName = styled(Typography)`
   white-space: nowrap;
   opacity: ${({ selected }) => (selected ? 1 : 0.4)};
   flex: 0 0 75%;
+  ${(props) => props.theme.breakpoints.down("lg")} {
+    font-size: 70px;
+  }
+  ${(props) => props.theme.breakpoints.down("md")} {
+    font-size: 40px
+  }
 `;
 
 export default FriendsCarousel;

@@ -49,6 +49,9 @@ const TabsContainer = styled(Box)`
   display: flex;
   justify-content: center;
   margin-top: 24px;
+  ${(props) => props.theme.breakpoints.down("lg")} {
+    display: none;
+  }
 `;
 const StyledTab = styled(Tab)`
   font-family: ABC Ginto Normal Variable;
