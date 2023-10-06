@@ -1,5 +1,6 @@
 import { Box, styled } from "@mui/material";
 import Squad1Img from "../assets/squad1.png";
+import Squad2Img from "../assets/squad2.png";
 import LeftIcon from "../assets/angle-left-small.svg";
 import RightIcon from "../assets/angle-right-small.svg";
 import LikeIcon from "../assets/like.svg";
@@ -7,8 +8,52 @@ import SuperLikeIcon from "../assets/super-like.svg";
 import CardTitle from "./common/CardTitle";
 import CardDescription from "./common/CardDescription";
 import CardAddToCart from "./common/CardAddToCart";
+import AliceCarousel from "react-alice-carousel";
+import { useEffect, useMemo, useState } from "react";
+
+const settings = {
+  disableButtonsControls: true,
+  momentum: true,
+  disableDotsControls: true,
+  animationEasingFunction: "linear",
+  animationDuration: 300,
+  infinite: true,
+  loop: true,
+  responsive: {
+    1024: { items: 1 },
+    800: { items: 1 },
+    500: { items: 1 },
+    320: { items: 1 },
+  },
+};
+
+const squadData = [
+  {
+    text: "Olaplex No. 7 Bonding Oil Free Sample",
+    image: Squad1Img,
+  },
+  {
+    text: "Pley Beauty Festival Flush Free sample",
+    image: Squad2Img,
+  },
+];
+
 const SquadMatches = () => {
-  console.log("LeftIcon", RightIcon);
+  const [currentSquad, setCurrentSquad] = useState(0);
+
+  const carouselData = useMemo(
+    () => squadData.map((data) => <Image src={data.image} />),
+    []
+  );
+
+  const handleCurrentSquad = (val) => {
+    if (val === "add") {
+      setCurrentSquad((prev) => (prev + 1) % 2);
+    } else {
+      setCurrentSquad((prev) => (prev - 1) % 2);
+    }
+  };
+
   return (
     <Main>
       <Wrapper elevation={3}>
@@ -17,7 +62,13 @@ const SquadMatches = () => {
           <br />
           items you both loved
         </Title>
-        <Image src={Squad1Img} />
+        <Box maxWidth="620px">
+          <AliceCarousel
+            items={carouselData}
+            activeIndex={currentSquad}
+            {...settings}
+          />
+        </Box>
         <ActionContainer>
           <LeftActionContainer>
             <ReactionContainer>
@@ -29,15 +80,15 @@ const SquadMatches = () => {
               </ReactionButton>
             </ReactionContainer>
             <CardDescription textAlign="left">
-              Olaplex No. 7 Bonding Oil Free Sample
+              {squadData[currentSquad].text}
             </CardDescription>
             <CardAddToCart>Add to cart</CardAddToCart>
           </LeftActionContainer>
           <RightActionContainer>
-            <SliderButton>
+            <SliderButton onClick={() => handleCurrentSquad()}>
               <SliderButtonIcon src={LeftIcon} />
             </SliderButton>
-            <SliderButton>
+            <SliderButton onClick={() => handleCurrentSquad("add")}>
               <SliderButtonIcon src={RightIcon} />
             </SliderButton>
           </RightActionContainer>
@@ -81,8 +132,7 @@ const SliderButton = styled("button")`
   border-radius: 100px;
   background: var(--content-white-enabled, #fff);
   /* Elevation/400 */
-  box-shadow:
-    0px 40px 80px -16px rgba(25, 21, 49, 0.16),
+  box-shadow: 0px 40px 80px -16px rgba(25, 21, 49, 0.16),
     0px 12px 32px -8px rgba(25, 21, 49, 0.16),
     0px 0px 1px 0px rgba(25, 21, 49, 0.16);
   border: 1px solid transparent;
