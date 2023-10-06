@@ -26,10 +26,20 @@ const Overview = () => {
 
 const CardGrid = styled(Box)`
   margin-top: 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 278px;
-  grid-gap: 40px;
+  gap: 40px;
+  display: flex;
+  ${(props) => props.theme.breakpoints.down("md")} {
+    flex-direction: column;
+  }
+  ${(props) => props.theme.breakpoints.up("md")} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns, each taking 1 fraction of available space */
+  }
+  ${(props) => props.theme.breakpoints.up("lg")} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 278px;
+  }
 `;
 
 export default Overview;

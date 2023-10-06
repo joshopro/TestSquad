@@ -27,19 +27,35 @@ const Image = styled("img")`
 `;
 
 const TextContainer = styled(Box)`
-  padding: 0 64px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding: 40px;
+
+  ${(props) => props.theme.breakpoints.up("md")} {
+    grid-row: 1;
+  }
+  ${(props) => props.theme.breakpoints.up("lg")} {
+    padding: 0 64px;
+    grid-row: 1 span / 2;
+  }
 `;
 
 const Wrapper = styled(Box)`
-  grid-row: 1 span / 2;
   background: var(--primary-50, #fff7fd);
-  display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   border-radius: 24px;
   align-items: center;
+
+  ${(props) => props.theme.breakpoints.up("md")} {
+    display: flex;
+    flex-direction: column;
+    grid-row: 1;
+  }
+  ${(props) => props.theme.breakpoints.up("lg")} {
+    display: flex;
+    flex-direction: row;
+    grid-row: 1 span / 2;
+  }
 `;

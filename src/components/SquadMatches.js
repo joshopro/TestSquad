@@ -20,10 +20,7 @@ const settings = {
   infinite: true,
   loop: true,
   responsive: {
-    1024: { items: 1 },
-    800: { items: 1 },
-    500: { items: 1 },
-    320: { items: 1 },
+    items: 1,
   },
 };
 
@@ -42,7 +39,12 @@ const SquadMatches = () => {
   const [currentSquad, setCurrentSquad] = useState(0);
 
   const carouselData = useMemo(
-    () => squadData.map((data) => <Image src={data.image} />),
+    () =>
+      squadData.map((data) => (
+        <Box width={"100%"}>
+          <Image src={data.image} />
+        </Box>
+      )),
     []
   );
 
@@ -62,7 +64,7 @@ const SquadMatches = () => {
           <br />
           items you both loved
         </Title>
-        <Box maxWidth="620px">
+        <Box maxWidth="100%">
           <AliceCarousel
             items={carouselData}
             activeIndex={currentSquad}
@@ -175,7 +177,12 @@ const Image = styled("img")`
 const Main = styled(Box)`
   background: var(--crme-lightest, #fff9f0);
   border-radius: 24px;
-  grid-row: 2 span / 2;
+  ${(props) => props.theme.breakpoints.up("md")} {
+    grid-column: span 2;
+  }
+  ${(props) => props.theme.breakpoints.up("lg")} {
+    grid-row: 2 span / 2;
+  }
 `;
 
 const Wrapper = styled(Box)`

@@ -26,7 +26,12 @@ const Image = styled("img")`
 `;
 
 const Main = styled(Box)`
-  grid-row: 1 span / 1;
+  ${(props) => props.theme.breakpoints.up("md")} {
+    grid-row: 1;
+  }
+  ${(props) => props.theme.breakpoints.up("lg")} {
+    grid-row: 1 span / 1;
+  }
   background: var(--secondary-50, #f8f8ff);
   border-radius: 24px;
 `;
