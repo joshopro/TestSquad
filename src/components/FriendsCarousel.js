@@ -113,7 +113,8 @@ const FriendMenu = styled(Box)`
   border-radius: 6px;
   background: var(--neutral-white, #fff);
   /* Elevation/400 */
-  box-shadow: 0px 40px 80px -16px rgba(25, 21, 49, 0.16),
+  box-shadow:
+    0px 40px 80px -16px rgba(25, 21, 49, 0.16),
     0px 12px 32px -8px rgba(25, 21, 49, 0.16),
     0px 0px 1px 0px rgba(25, 21, 49, 0.16);
 `;
@@ -155,7 +156,8 @@ const SliderButton = styled("button")`
   border-radius: 100px;
   background: var(--content-white-enabled, #fff);
   /* Elevation/400 */
-  box-shadow: 0px 40px 80px -16px rgba(25, 21, 49, 0.16),
+  box-shadow:
+    0px 40px 80px -16px rgba(25, 21, 49, 0.16),
     0px 12px 32px -8px rgba(25, 21, 49, 0.16),
     0px 0px 1px 0px rgba(25, 21, 49, 0.16);
   border: 1px solid transparent;
@@ -191,7 +193,7 @@ const FriendName = styled(Typography)`
     font-size: 70px;
   }
   ${(props) => props.theme.breakpoints.down("md")} {
-    font-size: 40px
+    font-size: 40px;
   }
 `;
 

@@ -44,7 +44,7 @@ const Heading = styled("span")`
     font-size: 26px;
   }
   ${(props) => props.theme.breakpoints.down("md")} {
-    font-size: 24px
+    font-size: 24px;
   }
 `;
 

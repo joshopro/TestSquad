@@ -33,7 +33,10 @@ const CardGrid = styled(Box)`
   }
   ${(props) => props.theme.breakpoints.up("md")} {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns, each taking 1 fraction of available space */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Two columns, each taking 1 fraction of available space */
   }
   ${(props) => props.theme.breakpoints.up("lg")} {
     display: grid;
