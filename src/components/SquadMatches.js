@@ -52,7 +52,7 @@ const SquadMatches = () => {
     if (val === "add") {
       setCurrentSquad((prev) => (prev + 1) % 2);
     } else {
-      setCurrentSquad((prev) => (prev - 1) % 2);
+      setCurrentSquad((prev) => prev === 0 ? 1 : 0);
     }
   };
 
@@ -86,7 +86,7 @@ const SquadMatches = () => {
               </BootstrapTooltip>
             </ReactionContainer>
             <CardDescription textAlign="left">
-              {squadData[currentSquad].text}
+              {squadData[currentSquad]?.text}
             </CardDescription>
             <CardAddToCart>Add to cart</CardAddToCart>
           </LeftActionContainer>
