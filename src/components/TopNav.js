@@ -108,7 +108,8 @@ const StyledSearchIcon = styled(SearchIcon)`
   }
 `;
 const DiamondWrapper = styled(Box)`
-  display: block;
+  display: flex;
+  width: 96px;
   ${(props) => props.theme.breakpoints.down("md")} {
     display: none;
   }
