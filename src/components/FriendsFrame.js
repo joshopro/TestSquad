@@ -8,9 +8,11 @@ const FriendsFrame = () => {
   return (
     <FrameContainer>
       <Frame>
-        <FriendImage alt={"friend 1"} src={friend1} />
-        <FriendImage alt={"friend 2"} src={friend2} overlap />
-        <FriendImage alt={"friend 3"} src={friend3} overlap />
+        <Box>
+          <FriendImage alt={"friend 1"} src={friend1} />
+          <FriendImage alt={"friend 2"} src={friend2} overlap />
+          <FriendImage alt={"friend 3"} src={friend3} overlap />
+        </Box>
         <Box mt="24px" width="338px">
           <Heading colorCode="#191531">You’ve added 3 friends to </Heading>
           <Heading colorCode="#E15EC4">your squad </Heading>
@@ -22,12 +24,16 @@ const FriendsFrame = () => {
 };
 
 const FrameContainer = styled(Box)`
+  margin-top: 105px;
   width: 100%;
   display: flex;
   justify-content: center;
 `;
 const Frame = styled(Box)`
   width: 376px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 const FriendImage = styled("img")`
   margin-left: ${({ overlap }) => (overlap ? "-22.14px" : "-16.57px")};

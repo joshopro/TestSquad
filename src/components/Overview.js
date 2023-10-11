@@ -6,12 +6,15 @@ import SquadMatches from "./SquadMatches";
 import SuperLikedCard from "./SuperLikedCard";
 import Layout from "./common/Layout";
 import FriendsCarousel from "./FriendsCarousel";
+import BonusCard from "./BonusCard";
+import InviteFriend from "./InviteFriend";
 
 const Overview = () => {
   return (
-    <>
+    <Container>
       <Navbar />
       <FriendsFrame />
+      <BonusCard />
       <FriendsCarousel />
       <Layout>
         <CardGrid>
@@ -20,7 +23,8 @@ const Overview = () => {
           <SquadMatches />
         </CardGrid>
       </Layout>
-    </>
+      <InviteFriend />
+    </Container>
   );
 };
 
@@ -42,6 +46,12 @@ const CardGrid = styled(Box)`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 278px;
+  }
+`;
+const Container = styled(Box)`
+  position: relative;
+  ${(props) => props.theme.breakpoints.down("md")} {
+    margin-bottom: 100px;
   }
 `;
 

@@ -5,6 +5,7 @@ import search from "../assets/search.svg";
 import userIcon from "../assets/user-circle.svg";
 import diamond from "../assets/diamond.svg";
 import shoppingBag from "../assets/shopping-bag.svg";
+import MoneyBills from "../assets/money-bills.svg";
 import FlexBox from "./common/FlexBox";
 
 const TopNav = () => {
@@ -24,12 +25,17 @@ const TopNav = () => {
           <img src={userIcon} alt="user" />
           <Dot />
         </AccountIconWrapper>
-        <Diamond alt="points" src={diamond} />
-        <Typography mx="4px" width="53px">
-          681 pts
-        </Typography>
+        <DiamondWrapper>
+          <Diamond alt="points" src={diamond} />
+          <Typography mx="4px" width="53px" sx={{color: '#191531'}}>
+            681 pts
+          </Typography>
+        </DiamondWrapper>
+        <MoneyWrapper>
+          <MoneyIcon src={MoneyBills} alt="money-bills" />
+        </MoneyWrapper>
         <ShoppingBag alt="cart" src={shoppingBag} />
-        <Typography ml="8px" mr="12px">
+        <Typography ml="8px" mr="12px" sx={{color: '#191531'}}>
           0
         </Typography>
       </FlexBox>
@@ -68,10 +74,6 @@ const Logo = styled("img")`
     margin-left: 12px;
     width: 90px;
   }
-  ${(props) => props.theme.breakpoints.down("sm")} {
-    margin-left: 4px;
-    width: 80px;
-  }
 `;
 const AccountIconWrapper = styled(Box)`
   position: relative;
@@ -104,6 +106,21 @@ const StyledSearchIcon = styled(SearchIcon)`
     margin-right: 12px;
     cursor: pointer;
   }
+`;
+const DiamondWrapper = styled(Box)`
+  display: block;
+  ${(props) => props.theme.breakpoints.down("md")} {
+    display: none;
+  }
+`;
+const MoneyWrapper = styled(Box)`
+  display: none;
+  ${(props) => props.theme.breakpoints.down("md")} {
+    display: block;
+  }
+`;
+const MoneyIcon = styled("img")`
+  margin-left: 12px;
 `;
 
 export default TopNav;

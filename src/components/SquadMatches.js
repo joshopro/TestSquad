@@ -1,4 +1,4 @@
-import { Box, styled } from "@mui/material";
+import { Box, Tooltip, styled, tooltipClasses } from "@mui/material";
 import Squad1Img from "../assets/squad1.png";
 import Squad2Img from "../assets/squad2.png";
 import LeftIcon from "../assets/angle-left-small.svg";
@@ -41,7 +41,7 @@ const SquadMatches = () => {
   const carouselData = useMemo(
     () =>
       squadData.map((data) => (
-        <Box width={"100%"}>
+        <Box display='flex' justifyContent='center' alignItems='center'>
           <Image src={data.image} />
         </Box>
       )),
@@ -74,12 +74,16 @@ const SquadMatches = () => {
         <ActionContainer>
           <LeftActionContainer>
             <ReactionContainer>
-              <ReactionButton>
-                <SliderButtonIcon src={LikeIcon}></SliderButtonIcon>
-              </ReactionButton>
-              <ReactionButton superLike>
-                <SliderButtonIcon src={SuperLikeIcon}></SliderButtonIcon>
-              </ReactionButton>
+              <BootstrapTooltip title="Alissa liked this product" placement="top-start">
+                <ReactionButton>
+                  <SliderButtonIcon src={LikeIcon}></SliderButtonIcon>
+                </ReactionButton>
+              </BootstrapTooltip>
+              <BootstrapTooltip title="Anne super liked this product" placement="top-start">
+                <ReactionButton superLike>
+                  <SliderButtonIcon src={SuperLikeIcon}></SliderButtonIcon>
+                </ReactionButton>
+              </BootstrapTooltip>
             </ReactionContainer>
             <CardDescription textAlign="left">
               {squadData[currentSquad].text}
@@ -193,3 +197,15 @@ const Wrapper = styled(Box)`
   /* align-items: flex-start; */
   /* align-items: center; */
 `;
+const BootstrapTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.arrow}`]: {
+    color: theme.palette.neutral.primary,
+  },
+  [`& .${tooltipClasses.tooltip}`]: {
+    padding: '10px 16px',
+    borderRadius: '8px',
+    backgroundColor: theme.palette.neutral.primary,
+  },
+}));

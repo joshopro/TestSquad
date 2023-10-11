@@ -48,7 +48,8 @@ const BottomNav = () => {
 const TabsContainer = styled(Box)`
   display: flex;
   justify-content: center;
-  margin-top: 24px;
+  margin-top: 80px;
+  border-bottom: 1px solid #f0eef4;
   ${(props) => props.theme.breakpoints.down("lg")} {
     display: none;
   }

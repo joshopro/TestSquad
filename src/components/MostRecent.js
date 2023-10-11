@@ -24,6 +24,9 @@ const Image = styled("img")`
   width: 100%;
   max-width: 210px;
   max-height: 278px;
+  ${(props) => props.theme.breakpoints.down("md")} {
+    margin-bottom: -6px;
+  }
 `;
 
 const TextContainer = styled(Box)`

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { Box, Typography, styled } from "@mui/material";
 import RightIcon from "../assets/angle-right-small.svg";
 import LeftIcon from "../assets/angle-left-small.svg";
@@ -34,9 +34,6 @@ const FriendsCarousel = () => {
       handleSelect(items[items.length - 1]);
     }
   }, [selected, handleSelect]);
-  useEffect(() => {
-    console.log(prevName, selected, nextName);
-  }, [prevName, selected, nextName]);
   return (
     <>
       <Container>
